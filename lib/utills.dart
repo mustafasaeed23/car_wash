@@ -164,3 +164,103 @@ void addCard(BuildContext context) {
             ),
           ));
 }
+
+showAlertDialogAuth(BuildContext context) {
+  // set up the button
+  Widget okButton = TextButton(
+    child: const Text("OK"),
+    onPressed: () {
+      Navigator.of(context).pushNamed(HomeScreen.routeName);
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Column(
+      children: [
+        // Center(
+        //   child: CircularProgressIndicator(
+        //     color: ColorManager.mainPrimaryColor4,
+        //     semanticsLabel: "Loading...",
+        //   ),
+        // ),
+
+        Text(
+          "Account Created Successfully",
+          style: getMediumBlack18Style(),
+        )
+      ],
+    ),
+    // content: Text(
+    //   "Hope you get Satisfied with \n our Services ",
+    //   style: getRegularBlack16Style(),
+    // ),
+    actions: [
+      okButton,
+    ],
+
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
+
+showAlertDialogLogin(BuildContext context) {
+  // set up the button
+  Widget okButton = TextButton(
+    child: const Text("OK"),
+    onPressed: () {
+      Navigator.of(context).pushNamed(HomeScreen.routeName);
+    },
+  );
+
+  // set up the AlertDialog
+  AlertDialog alert = AlertDialog(
+    title: Column(
+      children: [
+        // Center(
+        //   child: CircularProgressIndicator(
+        //     color: ColorManager.mainPrimaryColor4,
+        //     semanticsLabel: "Loading...",
+        //   ),
+        // ),
+        // Image.asset(
+        //   "assets/images/check 1.png",
+        //   width: 160.w,
+        //   height: 170.h,
+        //   fit: BoxFit.fill,
+        //   color: ColorManager.mainPrimaryColor2,
+        // ),
+        // SizedBox(
+        //   height: 20.h,
+        // ),
+        Text(
+          "Login Successfully",
+          style: getMediumBlack18Style(),
+        )
+      ],
+    ),
+    // content: Text(
+    //   "Hope you get Satisfied with \n our Services ",
+    //   style: getRegularBlack16Style(),
+    // ),
+    actions: [
+      okButton,
+    ],
+
+  );
+
+  // show the dialog
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return alert;
+    },
+  );
+}
+

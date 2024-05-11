@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled3/Screens/Review.dart';
@@ -10,7 +11,9 @@ import 'package:untitled3/auth/auth_screen.dart';
 import 'package:untitled3/login/login_screen.dart';
 import 'package:untitled3/splash/splash_screen.dart';
 
-void main() {
+void main()  {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -31,7 +34,7 @@ class MyApp extends StatelessWidget {
         routes: {
           SplashScreen.routeName:(context)=> SplashScreen(),
           AuthScreen.routeName:(context)=>  AuthScreen(),
-          LoginScreen.routeName:(context)=> const LoginScreen(),
+          LoginScreen.routeName:(context)=>  LoginScreen(),
           HomeScreen.routeName:(context)=> const HomeScreen(),
           ServicesDetails.routeName:(context)=> const ServicesDetails(),
           ReviewScreen.routeName:(context)=> const ReviewScreen(),

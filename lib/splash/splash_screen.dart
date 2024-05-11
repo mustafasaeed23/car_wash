@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled3/auth/auth_screen.dart';
+import 'package:untitled3/login/login_screen.dart';
 import 'package:untitled3/mangers/color_manager.dart';
 
 class SplashScreen extends StatelessWidget{
@@ -10,7 +11,7 @@ class SplashScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushNamed(AuthScreen.routeName);
+      Navigator.of(context).pushNamed(LoginScreen.routeName);
     });
     return Scaffold(
       backgroundColor: ColorManager.mainPrimaryColor4,
